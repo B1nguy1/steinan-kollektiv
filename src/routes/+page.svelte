@@ -1,3 +1,31 @@
+<script lang="ts">
+  import { collection, getDocs } from "firebase/firestore";
+  import { db } from "$lib/firebase";
+    import { onMount } from "svelte";
+
+  let allMembers:any = [];
+
+  export async function loadData(){
+    try{
+      const querySnapshot = await getDocs(collection(db,"people"));
+
+      allMembers = querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id}))
+
+    }catch (error){
+      console.error(error);
+    }
+
+    return {
+      props: { allMembers }
+      
+    }
+  }
+
+  onMount(() => {
+    loadData();
+  })
+</script>
+
 
 <style>
     header {
@@ -31,13 +59,12 @@
     padding: 10px 15px;
     transition: background-color 0.3s, color 0.3s;
   }
-
 </style>
 
 
 <header>
     
-    <h1 class="title">Steinan bois 2020/2021</h1>
+    <h1 class="title">EBS 32</h1>
 
     <nav class="menu">
         <!-- svelte-ignore a11y-invalid-attribute -->
@@ -45,6 +72,15 @@
         <!-- svelte-ignore a11y-invalid-attribute -->
         <a href="#">Medlemmer</a>
     </nav>
+
 </header>
+
+<div>
+  <ul>
+    {#each allMembers as member}
+      <div>{member.name}</div>
+    {/each}
+  </ul>
+</div>
 
 
