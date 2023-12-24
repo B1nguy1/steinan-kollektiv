@@ -1,8 +1,8 @@
 <script lang="ts">
 
     const carouselPhotos = [
-        'src/img/steinan.png',
-        'src/img/carbisgauccis.jpg'
+        'src/lib/images/steinan.png',
+        'src/lib/images/carbisgauccis.jpg'
     ];
 
     let index = 0
