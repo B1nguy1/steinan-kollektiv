@@ -2,7 +2,7 @@
   import Typewriter from 'svelte-typewriter';
   import { onMount } from 'svelte';
 
-  let text = "👋VELKOMMEN TE EBS 32";
+  let text = "👋VELKOMMEN TIL EBS 32";
   let clearAfter = 1000;
 
   let showText = true;
