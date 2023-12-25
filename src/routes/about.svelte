@@ -1,10 +1,10 @@
 <script lang="ts">
 
-    const carouselPhotos = [
-        'src/lib/images/steinan.png',
-        'src/lib/images/carbisgauccis.jpg'
-    ];
-
+    let carouselPhotos = [
+        "src/lib/images/carbisgauccis.jpg",
+        "src/lib/images/steinan.png"
+    ]
+    
     let index = 0
 
     const nextImage = () => {
