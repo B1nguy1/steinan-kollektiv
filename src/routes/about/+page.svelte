@@ -24,22 +24,35 @@
     img, button {
         position:relative;
     }
+
+    .title-container {
+     width: 100%; 
+     text-align: center; 
+     margin-bottom: 20px; 
+    }
+
+    .section-container {
+      justify-content: flex-start;
+      width:100%;
+      padding-top: 20px;
+    }
 </style>
 
 <svelte:head>
     <title>About</title>
 </svelte:head>
 
-<section class="flex flex-col items-center justify-center">
+<section class="flex flex-colitems-center section-container">
     <div>
-        <h1 class="font-serif text-center mb-6"> Om Steinan </h1>
-        <div class="font-serif text-center mx-auto">
+        <div class="title-container">
+        <h1 class="font-serif text-3xl mb-1"> Om Steinan </h1>
+        </div>
+         <div class="font-serif text-center mx-auto">
             <p class="mt-6">
                 I hjertet av Steinan, en livlig og kulturelt rik del av byen, ligger EBS 32 - 
                 et kollektiv som ikke bare er et hjem for studenter, men også et senter for samfunnsengasjement 
                 og bærekraftig levemåte.
                 <br>
-                
                 <br>
                 EBS 32 skiller seg ut med sitt sterke samhold og mangfold. Kollektivet består av studenter fra ulike studieretninger,
                 kulturer og bakgrunner, noe som skaper en unik smeltedigel av ideer og perspektiver. 

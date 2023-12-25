@@ -1,4 +1,5 @@
 <style>
+
     .customheader{
         display:flex;
         background-color: #f8f8f8;
@@ -19,15 +20,14 @@
 
     :global(.menu .style-link) {
         text-decoration: none;
-        color: #333;
+        color: red;
         padding: 10px 20px;
-        font-family: 'Arial', sans-serif;
     }       
 </style>
 
 <div class="customheader">
     <nav class="menu">
-        <a href="/" class="title font-serif no-underline text-black">EBS 32</a>
+        <a href="/" class="style-link title font-serif no-underline">EBS 32</a>
         <div class="menu-right">
             <a href="/about" class="style-link font-serif">Om Steinan</a>
             <a href ="/members" class="style-link font-serif">Medlemmer</a>

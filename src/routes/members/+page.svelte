@@ -34,6 +34,21 @@
 </script>
 
 <style>
+    .section-container {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width:100%;
+      padding: 20px;
+    }
+
+  .title-container {
+     width: 100%; 
+     text-align: center; 
+     margin-bottom: 20px; 
+  }
+
     .card {
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -42,49 +57,52 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   
-    .card-header {
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #eee;
-      font-size: 1.25em;
-      font-weight: bold;
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center cards */
+      gap: 20px; /* Space between cards */
     }
   
-    .card-body {
-      margin-bottom: 16px;
-    }
-  
-    .card-footer {
-      margin-top: 16px;
-      padding-top: 8px;
-      border-top: 1px solid #eee;
-      text-align: right;
-    }
-  </style>
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.2s; 
+  }
+
+  .profilepic {
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 50%;
+  }
+</style>
 
 <svelte:head>
     <title>Medlemmer</title>
 </svelte:head>
 
 
-<section class="flex flex-row flex-wrap items-center justify-center px-2">
-    <div class="w-full text-center">
-        <h1 class="font-serif text-3xl mb-1">Medlemmer</h1>
-    </div>
+<section class="section-container">
+  <div class="title-container">
+    <h1 class="font-serif text-3xl mb-1">Medlemmer</h1>
+  </div>
+  <div class="cards-container">
     {#each allMembers as member}
-    <div class="card flex-shrink-0 m-2">
+      <div class="card">
         <div class="card-header">
-          {member.name}
-        </div>      
-        <div class="card-body">
-          <slot></slot>
+        <img src="images/profile.jpg" alt="profile" class="profilepic"/>
+        <p class="text-center font-bold text-lg"> {member.name} </p>
         </div>
-      
-        <div class="card-footer">
-          <slot name="footer"></slot>
+        <div class="card-body text-center">
+          <p>År: {member.age}</p>
         </div>
       </div>
-      {/each}
+    {/each}
+  </div>
 </section>
-
-
