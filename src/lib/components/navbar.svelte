@@ -1,10 +1,3 @@
-<script lang="ts">
-    import { Router, Link, Route} from 'svelte-routing';
-    import Members from '../../routes/members.svelte';
-    import About from '../../routes/about.svelte';
-    import Page from '../../routes/+page.svelte';
-  </script>
-
 <style>
     .customheader{
         display:flex;
@@ -32,19 +25,13 @@
     }       
 </style>
 
-<Router>
-    <div class="customheader">
-        <nav class="menu">
-            <Link to="/+page" class="title font-serif no-underline text-black">EBS 32</Link>
-            <div class="menu-right">
-            <Link to="/about" class="style-link font-serif">Om steinan</Link>
-            <Link to="/members" class="style-link font-serif">Medlemmer</Link>
-            </div>
-        </nav>
-    </div>
-        <main>
-            <Route path="/+page" component={Page} />
-            <Route path="about" component={About}/>
-            <Route path="members" component={Members}/>
-        </main>
-</Router>
+<div class="customheader">
+    <nav class="menu">
+        <a href="/" class="title font-serif no-underline text-black">EBS 32</a>
+        <div class="menu-right">
+            <a href="/about" class="style-link font-serif">Om Steinan</a>
+            <a href ="/members" class="style-link font-serif">Medlemmer</a>
+        </div>
+    </nav>
+</div>
+

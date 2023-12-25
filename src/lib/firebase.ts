@@ -16,13 +16,8 @@ const firebaseConfig = {
   measurementId: "G-9CKBP293GC"
 };
 
-const firebaseApp = (getApps().length ===0 ? initializeApp(firebaseConfig): getApp())
+const firebaseApp = (getApps().length === 0 ? initializeApp(firebaseConfig): getApp());
 
-const db = getFirestore()
+const db = getFirestore(); 
 
-export{firebaseApp,db}
-
-//export const app = initializeApp(firebaseConfig);
-//xport const db = getFirestore(app);
-
-
+export{firebaseApp,db};
