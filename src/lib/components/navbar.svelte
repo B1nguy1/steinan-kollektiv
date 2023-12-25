@@ -2,10 +2,10 @@
     import { Router, Link, Route} from 'svelte-routing';
     import Members from '../../routes/members.svelte';
     import About from '../../routes/about.svelte';
+    import Page from '../../routes/+page.svelte';
   </script>
 
 <style>
-
     .customheader{
         display:flex;
         justify-content: space-between;
@@ -23,20 +23,17 @@
         font-weight: bold;
     }
 
-   
-
   :global(.menu .style-link) {
     text-decoration: none;
     color: #333;
     padding: 10px 20px;
     font-family: 'Arial', sans-serif;
     }       
-
 </style>
 
 <Router>
     <div class="customheader">
-        <h1 class="title font-serif">EBS 32</h1>
+        <a href="/" class="title font-serif no-underline text-black">EBS 32</a>
         <nav class="menu">
             <Link to="/about" class="style-link font-serif">Om steinan</Link>
             <Link to="/members" class="style-link font-serif">Medlemmer</Link>

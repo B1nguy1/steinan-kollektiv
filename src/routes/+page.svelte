@@ -22,7 +22,7 @@
   <title> HOME </title>
 </svelte:head>
 
-<section class="flex flex-row flex-wrap items-center justify-center min-h-screen">
+<section class="flex flex-colflex-wrap items-center justify-center">
   <div class="w-full text-center">
     {#if showText}
       <Typewriter interval={80}>

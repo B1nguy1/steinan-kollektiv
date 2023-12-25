@@ -67,7 +67,7 @@
 </svelte:head>
 
 
-<section class="flex flex-row flex-wrap items-center justify-center min-h-screen px-2">
+<section class="flex flex-row flex-wrap items-center justify-center px-2">
     <div class="w-full text-center">
         <h1 class="font-serif text-3xl mb-1">Medlemmer</h1>
     </div>
