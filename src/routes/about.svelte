@@ -1,8 +1,8 @@
 <script lang="ts">
 
     export let carouselPhotos = [
-        "src/lib/images/carbisgauccis.jpg",
-        "src/lib/images/steinan.png"
+        "/images/carbisgauccis.jpg",
+        "/images/steinan.png"
     ]
     
     let index = 0
