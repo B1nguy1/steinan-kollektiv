@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    let carouselPhotos = [
+    export let carouselPhotos = [
         "src/lib/images/carbisgauccis.jpg",
         "src/lib/images/steinan.png"
     ]
