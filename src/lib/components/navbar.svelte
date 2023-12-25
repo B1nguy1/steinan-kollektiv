@@ -8,13 +8,22 @@
 <style>
     .customheader{
         display:flex;
-        justify-content: space-between;
-        align-items: center;
         background-color: #f8f8f8;
         padding: 10px 20px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+    }
+
+    .menu-right {
+        display: flex;
+        gap: 20
+    }
+
     :global(.menu .style-link) {
         text-decoration: none;
         color: #333;
@@ -25,14 +34,16 @@
 
 <Router>
     <div class="customheader">
-        <Link to="/" class="title font-serif no-underline text-black">EBS 32</Link>
         <nav class="menu">
+            <Link to="/+page" class="title font-serif no-underline text-black">EBS 32</Link>
+            <div class="menu-right">
             <Link to="/about" class="style-link font-serif">Om steinan</Link>
             <Link to="/members" class="style-link font-serif">Medlemmer</Link>
+            </div>
         </nav>
     </div>
         <main>
-            <Route path="/" component={Page} />
+            <Route path="/+page" component={Page} />
             <Route path="about" component={About}/>
             <Route path="members" component={Members}/>
         </main>
